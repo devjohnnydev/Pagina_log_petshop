@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cãopeão</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="auth-page">
+    <!-- Container principal da página de autenticação -->
+    <div class="auth-container">
+        <!-- Card do formulário de login -->
+        <div class="auth-card">
+            <!-- Cabeçalho do card -->
+            <div class="auth-header">
+                <div class="logo">
+                    <i class="fas fa-paw"></i>
+                    <h1>Cãopeão</h1>
+                </div>
+                <h2>Fazer Login</h2>
+                <p>Entre na sua conta para acessar nossos serviços</p>
+            </div>
+
+            <!-- Formulário de login -->
+            <form id="loginForm" class="auth-form">
+                <!-- Campo de email -->
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        placeholder="seu@email.com"
+                        autocomplete="email"
+                    >
+                </div>
+
+                <!-- Campo de senha -->
+                <div class="form-group">
+                    <label for="senha">
+                        <i class="fas fa-lock"></i>
+                        Senha
+                    </label>
+                    <input 
+                        type="password" 
+                        id="senha" 
+                        name="senha" 
+                        required 
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                    >
+                </div>
+
+                <!-- Checkbox para lembrar login -->
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="lembrar" name="lembrar">
+                        <span class="checkmark"></span>
+                        Lembrar de mim
+                    </label>
+                </div>
+
+                <!-- Botão de submit -->
+                <button type="submit" class="btn btn-primary btn-full">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Entrar
+                </button>
+            </form>
+
+            <!-- Área de mensagens (erro/sucesso) -->
+            <div id="message" class="message hidden"></div>
+
+            <!-- Links adicionais -->
+            <div class="auth-footer">
+                <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+                <a href="index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    Voltar ao início
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
